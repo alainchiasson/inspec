@@ -16,5 +16,6 @@ control 'tmp-1.0' do                        # A unique ID for this control
   desc 'An optional description...'
   describe file('/tmp') do                  # The actual test
     it { should be_directory }
+    it { should be_owned_by 'root' }
   end
 end
